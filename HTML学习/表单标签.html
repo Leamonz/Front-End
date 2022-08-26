@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <!-- text  文本框  用户可以在里面输入任何文字 -->
+        <!-- value 是文本框中默认的值 -->
+        <label for="username">用户名：</label>
+        <input type="text" maxlength="6" id="username"> <br />
+        <!-- password  密码框  用户看不见输入的密码 -->
+        <label for="pwd">密码：</label><input type="password" id="pwd"> <br />
+        <!-- radio 单选按钮 可以实现多选一 -->
+        <!-- name 是表单元素名字，单选按钮要有相同的名字才能实现多选一 -->
+        性别：<input type="radio" name="sex" id="male"> <label for="male">男</label>
+        <input type="radio" name="sex" id="female"> <label for="female">女</label> <br />
+        <!-- checkbox 复选框 可以实现多选效果 -->
+        爱好：吃饭<input type="checkbox" name="hobby"> 睡觉<input type="checkbox" name="hobby"> <br />
+        <!-- submit 提交，将表单数据提交给后台 -->
+        <input type="submit" value="注册"> <br />
+        <!-- reset 重置按钮，可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新填写"> <br />
+        <!-- file 文件域 上传文件使用 -->
+        上传头像：<input type="file"> <br />
+        <!-- select 下拉表单元素 定义下拉列表 -->
+        籍贯：
+        <select>
+            <option>北京</option>
+            <option>四川</option>
+            <option selected="selected">江西</option>
+            <option>上海</option>
+        </select>
+        <br />
+        <!-- textarea 文本域元素 可以创建输入内容多的文本框-->
+        <textarea>留言</textarea>
+    </form>
+</body>
+
+</html>

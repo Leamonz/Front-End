@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            background-color: pink;
+            width: 1226px;
+            height: 615px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .left {
+            float: left;
+            background-color: skyblue;
+            height: 100%;
+            width: 234px;
+            margin-right: 16px;
+        }
+
+        .right {
+            float: left;
+            background-color: green;
+            height: 100%;
+            width: 976px;
+        }
+
+        .right ul {
+            height: 100%;
+        }
+
+        .right ul li {
+            width: 235px;
+            height: 300px;
+            margin-left: 9px;
+            margin-top: 5px;
+            float: left;
+            background-color: orange;
+        }
+
+        /*         .right .last {
+            margin-right: 0px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">左边</div>
+        <div class="right">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li class="last">4</li>
+                <li class="under">5</li>
+                <li class="under">6</li>
+                <li class="under">7</li>
+                <li class="last under">8</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

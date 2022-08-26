@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .prev,
+        .next {
+            text-decoration: none;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .3);
+            font-size: 26px;
+            color: white;
+            top: 50%;
+            margin-top: -20px;
+            width: 30px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        .tb-promo img {
+            width: 600px;
+            height: 300px;
+        }
+
+        .tb-promo .prev {
+            position: absolute;
+            left: 0;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        .tb-promo .next {
+            position: absolute;
+            right: 0;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .promo-nav {
+            position: absolute;
+            width: 70px;
+            height: 13px;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            /* 把列表元素前的小圆点去除，然后画圆 */
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+        .promo-nav li:visited {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <img src="../../../ALL_IMAGES/1.png">
+        <a href="#" class="prev">&lt;</a><a href="#" class="next">&gt;</a>
+        <ul class="promo-nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+h1 {
+    /* 文字居中对齐 */
+    text-align: center;
+    /* 文字不加粗 */
+    font-weight: 400;
+}
+
+.foot {
+    font-size: 10px;
+    text-align: center;
+    color: gray;
+}
+
+#image {
+    /* 让图片水平对齐应该给它的父标签添加水平居中的代码 */
+    text-align: center;
+}
+
+body {
+    font: 16px/26px 'Microsoft Yahei' ;
+}
+
+p {
+    /* 首行缩进2个字 */
+    text-indent: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search {
+    color: #666;
+    width: 173px;
+}
+.footer {
+    text-align: left;
+    font-size: 10px;
+    color: gray;
+}

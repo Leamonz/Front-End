@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角制作</title>
+    <style>
+        /*         .box1 {
+            width: 0;
+            height: 0;
+            border-top: 10px solid white;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+        } */
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .up-arrow {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: white;
+            display: none;
+        }
+
+        .container:hover .up-arrow {
+            display: block;
+        }
+
+        .box {
+            position: relative;
+            width: 120px;
+            height: 249px;
+            background-color: skyblue;
+            margin: 30px auto;
+        }
+
+        .arrow {
+            position: absolute;
+            top: -20px;
+            left: 80px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom-color: white;
+            display: none;
+        }
+
+        .box:hover .arrow {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+    <div class="container">
+        <div class="up-arrow"></div>
+    </div>
+
+    <div class="box">
+        <div class="arrow"></div>
+    </div>
+</body>
+
+</html>

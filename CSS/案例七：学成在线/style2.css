@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 确定版心，设置宽度和居中对齐，如果是版心只需要添加该类即可，不用重复写以下样式 */
+.banxin {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 196px;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+
+.nav {
+    float: left;
+    height: 100%;
+    /* nav导航栏可以不给宽度，以便之后继续添加文字 */
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a {
+    display: block;
+    color: #050505;
+    font-size: 18px;
+    height: 100%;
+    line-height: 42px;
+    /* 导航栏中文字不一样多，最好用padding实现水平居中 */
+    padding: 0 10px;
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.nav .last {
+    margin-right: 0;
+}
+
+.search {
+    float: left;
+    width: 412px;
+    height: 100%;
+    margin-left: 50px;
+}
+
+.search input {
+    /* 加了浮动之后，两个元素之间不会有缝隙 */
+    float: left;
+    border: 2px solid #00a4ff;
+    /* 消除右边框 */
+    border-right: 0;
+    font-size: 14px;
+    color: rgb(189, 192, 191);
+    width: 340px;
+    height: 38px;
+    padding-left: 20px;
+}
+
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+    background-image: url(images/search.png);
+}
+
+.avatar {
+    float: left;
+    height: 100%;
+    line-height: 42px;
+    /* margin: 30px 0; */
+    margin-left: 30px;
+}
+
+.avatar img {
+    float: left;
+    width: 40px;
+    height: 100%;
+}
+
+.avatar span {
+    float: left;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .banxin {
+    height: 100%;
+    /* background-image: url(images/banner.png); */
+    /* background简写属性 */
+    background: url(images/banner.png) no-repeat top center;
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.subnav ul li {
+    width: 190px;
+    height: 45px;
+}
+
+.subnav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #e9e9ec;
+    font-size: 14px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin: 60px 0;
+    background-color: white;
+}
+
+.course h3 {
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #9bceea;
+}
+
+.course .bd {
+    height: 250px;
+    width: 230px;
+    padding: 10px 20px;
+}
+
+.course .bd ul li {
+    width: 190px;
+    height: 30px;
+    border-bottom: 1px solid #efefef;
+    padding: 15px 0;
+}
+
+.course .bd ul li h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4e4e4e;
+}
+
+.course .bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.course .bd a {
+    display: block;
+    text-align: center;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #00a4ff;
+    width: 190px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 5px;
+}
+
+.course .bd a:hover {
+    background-color: #00a4ff;
+    color: #fff;
+}
+
+.recommend {
+    height: 60px;
+    /* 行高会被继承 */
+    line-height: 60px;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .3);
+}
+
+.recommend h4 {
+    float: left;
+    width: 135px;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.recommend ul {
+    float: left;
+}
+
+.recommend ul li {
+    float: left;
+}
+
+.recommend ul li a {
+    padding: 0 30px;
+    border-left: 1px solid #ccc;
+    font-size: 16px;
+    color: #555;
+}
+
+.recommend .last {
+    float: right;
+    width: 70px;
+    height: 60px;
+    padding: 0 25px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+.recommend .last:hover {
+    text-decoration: underline;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.main-hd {
+    height: 40px;
+    line-height: 40px;
+}
+
+.main-hd h3 {
+    float: left;
+    font-weight: 400;
+    font-size: 20px;
+    color: #494949;
+}
+
+.main-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-right: 30px;
+}
+
+.main-bd ul {
+    /* 让父盒子宽度足够包容边距 */
+    width: 1225px;
+}
+
+.main-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.main-bd ul li:hover {
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .3);
+}
+
+.main-bd ul li img {
+    width: 100%;
+}
+
+.main-bd ul li .intro {
+    display: block;
+    width: 182px;
+    height: 25px;
+    font-size: 14px;
+    color: #555;
+    padding: 25px 24px;
+}
+
+.main-bd ul li .info {
+    margin: 0 24px;
+    font-size: 12px;
+    color: #999;
+}
+
+.main-bd ul li span {
+    color: #ff7c2d;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.footer {
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .content {
+    height: 415px;
+}
+
+.footer .content .left {
+    float: left;
+    height: 140px;
+    width: 425px;
+    padding: 35px 0 240px 20px;
+}
+
+.footer .content .left>img {
+    width: 195px;
+}
+
+.footer .content .left>p {
+    font-size: 12px;
+    color: #666666;
+    margin: 25px 0 16px 0;
+}
+
+.footer .content .left>a {
+    display: block;
+    text-align: center;
+    width: 118px;
+    height: 33px;
+    line-height: 33px;
+    border: 1px solid #00a4ff;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.footer .content .left>a:hover {
+    color: #fff;
+    background-color: #00a4ff;
+}
+
+.footer .content .right {
+    float: right;
+    height: 380px;
+    width: 537px;
+    padding-top: 35px;
+}
+
+.footer .content .right>div {
+    float: left;
+    width: 95px;
+    margin-right: 120px;
+}
+
+.footer .content .right .last {
+    margin-right: 0;
+}
+
+.footer .content .right h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+}
+
+.footer .content .right ul {
+    margin-top: 17px;
+}
+
+.footer .content .right ul li a {
+    font-size: 12px;
+    color: #333333;
+}
+
+.footer .content .right ul li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素实现土豆案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3) url(../../ALL_IMAGES/arr.png) no-repeat center;
+            display: none;
+        }
+
+        .container:hover::before {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../../ALL_IMAGES/tudou.jpg">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script>
+		//继承方法一：原型链继承
+		// function Father(){
+		// 	this.supProp = 'Super Property';
+		// }
+		// Father.prototype.supProperty = function(){
+		// 	console.log(this.supProp);
+		// }
+		//
+		// function Child(){
+		// 	this.subProp = "Sub Property";
+		// }
+		//
+		// //核心步骤
+		// Child.prototype = new Father();//子类构造器指向Father
+		// console.log(Child.prototype.constructor);
+		// Child.prototype.constructor = Child;//修复代码，使子类构造器指向Child
+		// console.log(Child.prototype.constructor);
+		// Child.prototype.subProperty = function(){
+		// 	console.log(this.subProp);
+		// }
+		//
+		// var child = new Child();
+		// console.log(child.constructor);
+		// // child.subProperty();
+		// // child.supProperty();
+		
+		// 构造函数继承
+		// function Father(name){
+		// 	this.name = name || "父亲";
+		// 	this.arr = [1];
+		// 	this.walk = function(){
+		// 		console.log("I can walk.");
+		// 	}
+		// }
+		//
+		// Father.prototype.say = function(){
+		// 	console.log("HELLO! "+this.name);
+		// }
+		//
+		// function Child(name){
+		// 	Father.call(this, name);//核心，调用父类的构造函数，可以给父类传参。将this指向Child，拷贝了父类的属性和方法
+		// }
+		//
+		// let boy1 = new Child("小明");
+		// let boy2 = new Child("小刚");
+		// console.log(boy1.name, boy2.name);
+		// console.log(boy1.walk === boy2.walk);//父类的方法不复用
+		// boy1.say();//不能继承父类原型中的方法
+		
+		//组合继承
+		// function Parent(name) {
+		// 	this.name = name;
+		// 	this.arr = [1];
+		// }
+		//
+		// Parent.prototype.say = function () {
+		// 	console.log("HELLO! " + this.name);
+		// }
+		//
+		// function Child(name, like) {
+		// 	Parent.call(this, name);//构造函数继承 核心
+		// 	this.like = like;
+		// }
+		//
+		//
+		// Child.prototype = new Parent();//原型链继承 核心-----缺点：使用了两次Parent的构造函数，会有两个父类实例
+		// //改进：省去一次调用Parent构造函数
+		// // Child.prototype = Parent.prototype;
+		// //改进，创建中间对象，将父类原型和子类原型分隔开----完美方式：寄生组合继承
+		// Child.prototype = Object.create(Parent.prototype);
+		// Child.prototype.constructor = Child;//修复代码
+		//
+		// console.log(Child.prototype.constructor +
+		// 		"\n" + Parent.prototype.constructor);//缺点：修改Child的构造属性会连同Parent的构造属性一起修改。原因：Child.prototype和Parent.prototype指向了同一个对象
+		// Child.prototype.fruit = function(){
+		// 	console.log("My favorite fruit is "+this.like);
+		// }
+		//
+		// let boy1 = new Child("xiaoming", "apple");
+		// let boy2 = new Child("xiaohong", "banana");
+		// boy1.say();
+		// boy2.say();
+		// boy1.fruit();
+		// boy2.fruit();
+		// boy1.arr.push(2);
+		// console.log(boy1.arr, boy2.arr);
+		
+		let name = 'test1';
+		function hello(){
+			console.log(window.name);
+			let name = 'test2';
+			console.log(this.name);
+			console.log(name);
+		}
+		
+		hello();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

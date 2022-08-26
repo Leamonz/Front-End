@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script>
+		// function greet(){
+		// 	console.log(this.name);
+		// }
+		// var person = {
+		// 	name: "zhangsan",
+		// 	age:18,
+		// 	sayHello: greet
+		// }
+		// var name = "test";
+		//
+		//
+		//
+		// person.sayHello();
+		// greet();
+		
+		// for(var key in person){
+		// 	var personVal = person[key];
+		// 	console.log(key + ": " + personVal);
+		// }
+		//
+		// // 立即执行函数 --- 只能执行一次
+		// // (function instant_Func(){
+		// // 	console.log("This is an instant function.")
+		// // })()
+		// //函数
+		// function fun(){
+		// 	console.log("My first function.")
+		// }
+		//
+		// fun();
+		//
+		// function sum(num1, num2){
+		// 	return num1+num2;
+		// }
+		//
+		// var result = sum(10,20);
+		// console.log(result);
+		//
+		// person.greet();
+		// 利用工厂模式创造对象
+		// function createPerson(name, age){
+		// 	var person = {
+		// 		name: name,
+		// 		age: age,
+		// 		greet: function(){
+		// 			console.log("HELLO!");
+		// 		}
+		// 	}
+		// 	return person;
+		// }
+		// 在Person类的对象原型中添加方法
+		Person.prototype.greet = function(){
+			console.log("\'Hello!\' from " + this.name);
+		}
+		// 构造函数
+		function Person(name, age){
+			this.name = name;
+			this.age = age;
+		}
+		person1 = new Person("zsh", 19);
+		console.log(person1);
+		person1.greet();
+		
+		// for(var i = 1;i <= 100; i++){
+		// 	temp_person = createPerson("person"+i, 18);
+		// 	console.log(temp_person);
+		// 	temp_person.greet();
+		// }
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

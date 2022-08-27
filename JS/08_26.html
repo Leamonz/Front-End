@@ -3,17 +3,62 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Title</title>
-	<script>
-		console.log('a:',a);
-		var a = 10;
-		// console.log('b:',b);
-		b = 20;
-		console.log(b);
-		console.log(window.b);
-		console.log(window);
-	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+
+	</style>
 </head>
 <body>
+<!--<button id="btn">我是按钮</button>-->
+<!--<button id="btn1">-->
+<!--	<h1>我是button中的大按钮</h1>-->
+<!--</button>-->
 
+<div id="box" style="width: 300px;
+			height: 300px;
+			margin: 30px auto;
+			color: white;
+			background-color: red;">
+	我是一个盒子
+</div>
+
+<button id="btn">
+	我是按钮
+</button>
+
+
+<!-- 在这里写JavaScript代码，因为JavaScript是由上到下执行的 -->
+<script>
+	let btn = document.getElementById("btn");
+	// btn.innerText = "我是一个按钮";
+	// btn.innerHTML = "<h1>我是按钮中的大标题</h1>";
+	// console.log(btn);
+	// btn.style.width = "300px";
+	let box = document.getElementById("box");
+	box.style.backgroundColor = "#00a4ff";
+	
+	// let box = document.getElementById("box");
+	// console.log(getComputedStyle(box, null).width);
+	// // console.log(box.textContent);
+	// // console.log(box.innerText);
+	// box.style.backgroundColor = ;
+	// console.log(box.style.width);
+	// let btn = document.getElementById("btn");
+	// console.log(btn);
+	
+	// let buttons = document.getElementsByTagName("button");
+	// // console.log(buttons);
+	//
+	// let btn = document.getElementById("btn1");
+	// console.log(btn.innerHTML);
+	// console.log(btn.innerText);
+	// console.log(buttons[0].innerText);
+	
+	
+</script>
 </body>
 </html>

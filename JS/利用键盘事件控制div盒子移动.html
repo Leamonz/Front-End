@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+<div id="box" style="width: 100px;
+						height: 100px;
+						background-color:#00a4ff;
+						position:absolute;">
+
+</div>
+
+
+<script>
+	let box = document.getElementById("box");
+	
+	document.onkeydown = function (event) {
+		let speed = 10;//定义移动的速度
+		
+		switch (event.key) {
+			case "a"://left
+				box.style.left = box.offsetLeft - speed + "px";
+				console.log("left");
+				break;
+			case "w"://up
+				box.style.top = box.offsetTop - speed + "px";
+				console.log("up");
+				break;
+			case "d"://right
+				box.style.left = box.offsetLeft + speed + "px";
+				console.log("right");
+				break;
+			case "s"://down
+				box.style.top = box.offsetTop + speed + "px";
+				console.log("down");
+				break;
+			default:
+				console.warn();
+				break;
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		/*ul {*/
+		/*	width: 200px;*/
+		/*	height: 200px;*/
+		/*	margin: 50px auto;*/
+		/*	background-color: #00a4ff;*/
+		/*}*/
+		
+		/*ul > li {*/
+		/*	display: flex;*/
+		/*	justify-content: center;*/
+		/*	list-style: none;*/
+		/*	height: 20px;*/
+		/*	line-height: 20px;*/
+		/*	padding: 5px;*/
+		/*}*/
+		
+		/*input{*/
+		/*	width: 200px;*/
+		/*	height: 30px;*/
+		/*	line-height: 30px;*/
+		/*	!*border: 1px solid black;*!*/
+		/*}this*/
+	</style>
+</head>
+<body>
+
+<!--	<button id="btn">我是按钮</button>-->
+<!--	<ul>-->
+<!--		<li>我是ul里的li</li>-->
+<!--		<li>我是ul里的li</li>-->
+<!--		<li>我是ul里的li</li>-->
+<!--		<li>我是ul里的li</li>-->
+<!--	</ul>-->
+<!--<form>-->
+<!--&lt;!&ndash;	required表示必填字段&ndash;&gt;-->
+<!--	<input type="text" id="text" required>-->
+<!--	<input type="submit" id="submit">-->
+<!--</form>-->
+
+<!--<div id="box1" style="width: 300px;height: 300px;background-color:#00a4ff;">-->
+<!--	我是box1-->
+<!--	<div id="box2" style="width: 100px;height: 100px;background-color:#D3ECA7;">-->
+<!--		我是box2-->
+<!--	</div>-->
+<!--</div>-->
+
+<!--<ul id="u1">-->
+<!--	<li><a href="javascript:;" class="link">超链接一</a></li>-->
+<!--	<li><a href="javascript:;" class="link">超链接二</a></li>-->
+<!--	<li><a href="javascript:;" class="link">超链接三</a></li>-->
+<!--</ul>-->
+
+<button id="btn1">按钮1</button>
+<button id="btn2">按钮2</button>
+
+
+<script>
+	function f1() {
+		console.log("按钮1的点击响应事件1");
+	}
+	
+	function f2() {
+		console.log("按钮1的点击响应事件2");
+	}
+	
+	let btn1 = document.getElementById("btn1");
+	let btn2 = document.getElementById("btn2");
+	//第三个参数指定是否是冒泡事件，false为冒泡
+	btn1.addEventListener("click", f1, false);
+	btn1.addEventListener("click", f2, false);
+	
+	btn2.onclick = function () {
+		btn1.removeEventListener("click", f2, false);
+	}
+	
+	// let ul = document.getElementById("u1");
+	//
+	// ul.onclick = function(event){
+	// 	if(event.target.className == "link"){
+	// 		console.log("我是ul的单击响应元素");
+	// 	}
+	// }
+	
+	
+	// let box1 = document.getElementById("box1");
+	// let box2 = document.getElementById("box2");
+	//
+	// box1.onclick = function(event){
+	// 	console.log("box1的点击事件触发了");
+	// }
+	//
+	// box2.onclick = function(event){
+	// 	//存在事件冒泡，子元素事件发生后会触发父元素的相同事件
+	// 	console.log("box2的点击事件触发了");
+	// 	event.stopPropagation();//阻止冒泡事件
+	// }
+	
+	
+	// window.onkeydown = function(event){
+	// 	if(event.key == "a"){
+	// 		console.log(true);
+	// 	}else{
+	// 		console.log(false);
+	// 	}
+	//
+	// }
+	
+	// let input = document.getElementById("text");
+	// input.onfocus = function(){
+	// 	this.style.backgroundColor = "red";
+	// }
+	// input.onblur = function(){
+	// 	this.style.backgroundColor = "yellow";
+	// }
+	// //文本框内容改变，鼠标移出文本框后，在控制台输出文本框内容
+	// // input.onchange = function(){
+	// // 	console.log(this.value);
+	// // }
+	//
+	// input.oninput = function(){
+	// 	console.log(this.value);
+	// }
+	//
+	// //如果单击"submit",但不填写文本内容，将发生警报信息
+	// input.oninvalid = function(){
+	// 	// console.warn("请您完善表单内容！");
+	// 	console.log("请您完善表单内容！");
+	// }
+	//
+	// input.onselect = function(){
+	// 	console.log("您已选择文本框内容");
+	// }
+	//
+	// input.onsubmit = function(){
+	// 	console.log("提交表单");
+	// 	return false;
+	// }
+	
+	// window.onblur = function(){
+	// 	console.log("窗口失去焦点");
+	// }
+	// window.onfocus = function(){
+	// 	console.log("窗口获取焦点")
+	// }
+	
+	// let btn = document.getElementById("btn");
+	// let btn = document.querySelector("#btn");
+	// console.log(btn);
+	//
+	// let list_items = document.querySelectorAll("ul>li");
+	// console.log(list_items);
+	//
+	// let unordered_list = document.querySelector("ul");
+	// console.log(getComputedStyle(unordered_list, null).backgroundColor);
+	// console.log(getComputedStyle(unordered_list, null).width);
+	
+	// let ul = document.createElement("ul");
+	//
+	// for (let i = 1; i <= 4; i++) {
+	// 	let li = document.createElement("li");
+	// 	// let text = document.createTextNode("列表项" + i);
+	// 	// li.append(text);
+	// 	li.innerText = "列表项" + i;
+	// 	ul.appendChild(li);
+	// }
+	// document.getElementsByTagName("body")[0].appendChild(ul);
+	//
+	// // ul.insertAdjacentHTML("afterbegin", "<li id=\"zero\">列表项0</li>");
+	// // let list_items = document.querySelectorAll("ul li");
+	// // let list_items = ul.childNodes;
+	// // console.log(list_items);
+	// // ul.removeChild(list_items[0]);
+	// // console.log(list_items);
+	// // let new_li = document.createElement("li");
+	// // new_li.innerText = "我是替换的新列表项";
+	// // ul.replaceChild(new_li, list_items[3 - 1]);
+	//
+	// // ul.removeChild(ul.lastElementChild);
+	// // console.log(ul.childNodes);
+	// let node = ul.firstElementChild;
+	// console.log(node.nodeType);
+
+</script>
+
+</body>
+</html>

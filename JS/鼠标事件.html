@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+<div id="box"
+	 style="width: 200px;height: 200px;background-color: #000000;position:
+	 absolute;">
+</div>
+
+<script>
+	let box = document.getElementById("box");
+	// box.onmouseover = function(){
+	// 	box.style.backgroundColor = "#00a4ff";
+	// }
+	//
+	// box.onmouseout = function(){
+	// 	box.style.backgroundColor = "#D3ECA7";
+	// }
+	drag(box);
+	
+	function drag(obj){
+		
+		obj.onmousedown = function(event){
+			//计算鼠标位置的偏移量
+			let ol = event.clientX - obj.offsetLeft;
+			let ot = event.clientY - obj.offsetTop;
+			
+			document.onmousemove = function(event){
+				//修改盒子的坐标
+				obj.style.left = (event.clientX - ol) + "px";
+				obj.style.top = (event.clientY - ot) + "px";
+			}
+			
+			document.onmouseup = function(){
+				//取消document的 onmousemove 和 onmouseup事件
+				document.onmousemove = null;
+				document.onmouseup = null;
+			}
+		}
+		// return false;
+	}
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+th, td {
+	text-align: center;
+	width: 102px;
+	height: 37px;
+	border: 1px solid #E0E0E0;
+}
+
+th {
+	background-color: rgb(233, 233, 233);
+}
+
+table tr:hover {
+	background: rgb(233, 233, 233);
+	cursor: pointer;
+}

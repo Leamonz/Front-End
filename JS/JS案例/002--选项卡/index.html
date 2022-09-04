@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<ul id="options">
+		<li><a href="#">选项1</a></li>
+		
+		<li><a href="#">选项2</a></li>
+		
+		<li><a href="#">选项3</a></li>
+		
+		<li><a href="#">选项4</a></li>
+		
+		<li><a href="#">选项5</a></li>
+	</ul>
+	
+	<div id="content">
+		请进行选择
+	</div>
+</div>
+
+<script>
+	let options = document.querySelectorAll(".container #options li");
+	
+	let content = document.getElementById("content");
+	for (let i = 0; i < 5; i++) {
+		options[i].onclick = function () {
+			options[i].style.backgroundColor = "rgb(240, 240, 240)";
+			for (let j = 0; j < 5; j++) {
+				if (i != j) {
+					options[j].style.backgroundColor = "#fff";
+				}
+			}
+			content.innerText = "选项" + String(i + 1) + "的内容";
+		}
+	}
+</script>
+</body>
+</html>

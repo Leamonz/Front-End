@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+	<div id="display">
+		<img src="img/big/1.jpg">
+	</div>
+	
+	<div class="photos">
+		<img src="img/small/1.jpg" title="girl1">
+		<img src="img/small/2.jpg" title="girl2">
+		<img src="img/small/3.jpg" title="girl3">
+		<img src="img/small/4.jpg" title="girl4">
+		<img src="img/small/5.jpg" title="girl5">
+	</div>
+</div>
+
+
+<script>
+	let display = document.querySelector("#display img");
+	
+	let imgs = document.querySelectorAll(".container .photos img");
+	for (let i = 0; i < 5; i++) {
+		imgs[i].onclick = function () {
+			display.src = "img/big/" + String(i + 1) + ".jpg";
+		}
+	}
+	
+	// imgs[0].onclick = function () {
+	// 	display.src = "img/big/1.jpg";
+	// }
+	// imgs[1].onclick = function () {
+	// 	display.src = "img/big/2.jpg"
+	// }
+	// imgs[2].onclick = function () {
+	//
+	// }
+</script>
+
+</body>
+</html>

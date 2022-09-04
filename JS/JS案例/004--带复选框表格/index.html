@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<table>
+	<tr>
+		<th><input type="checkbox"></th>
+		<th>商品名称</th>
+		<th>商品数量</th>
+		<th>商品单价</th>
+	</tr>
+	
+	<tr>
+		<td><input type="checkbox"></td>
+		<td>小米手机</td>
+		<td>96</td>
+		<td>4999</td>
+	</tr>
+	
+	<tr>
+		<td><input type="checkbox"></td>
+		<td>小米手机</td>
+		<td>96</td>
+		<td>4999</td>
+	</tr>
+	
+	<tr>
+		<td><input type="checkbox"></td>
+		<td>小米手机</td>
+		<td>96</td>
+		<td>4999</td>
+	</tr>
+	
+	
+	<script>
+		let rows = document.getElementsByTagName("tr");
+		for (let i = 1; i < 4; i++) {
+			rows[i].onclick = function () {
+				let items = rows[i].children;
+				
+				let checkbox = items[0].firstElementChild;
+				
+				checkbox.checked = checkbox.checked == true ? false : true;
+				let flag = true;
+				for (let j = 1; j < 4; j++) {
+					flag = rows[j].children[0].firstElementChild.checked;
+					if (!flag) {
+						break;
+					}
+				}
+				if (flag) {
+					rows[0].children[0].firstElementChild.checked = true;
+				}else{
+					rows[0].children[0].firstElementChild.checked = false;
+				}
+			}
+		}
+		rows[0].children[0].firstElementChild.onclick = function () {
+			for (let j = 1; j < 4; j++) {
+				rows[j].children[0].firstElementChild.checked = true;
+			}
+		}
+	</script>
+</table>
+</body>
+</html>

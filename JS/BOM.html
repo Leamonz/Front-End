@@ -1,10 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		/*#container {*/
+		/*	height: 100px;*/
+		/*	width: 100%;*/
+		/*	position: relative;*/
+		/*	z-index: 0;*/
+		/*	margin-top: 30px;*/
+		/*}*/
+		
+		/*#road800 {*/
+		/*	width: 900px;*/
+		/*	height: 100%;*/
+		/*	position: absolute;*/
+		/*	z-index: 2;*/
+		/*	top: 0;*/
+		/*	left: 0;*/
+		/*	background-color: #D3ECA7;*/
+		/*}*/
+		
+		/*#road1200 {*/
+		/*	width: 1300px;*/
+		/*	height: 100%;*/
+		/*	position: absolute;*/
+		/*	z-index: 1;*/
+		/*	top: 0;*/
+		/*	left: 0;*/
+		/*	background-color: #00a4ff;*/
+		/*}*/
+		
+		/*#car {*/
+		/*	width: 100px;*/
+		/*	height: 100%;*/
+		/*	background-color: #000000;*/
+		/*	position: absolute;*/
+		/*	z-index: 3;*/
+		/*	top: 0;*/
+		/*	left: 0;*/
+		/*}*/
+	</style>
 </head>
 <body>
-$END$
+
+<!--<div id="car"-->
+<!--	 style="width: 50px;height: 50px;background-color: #D3ECA7;-->
+<!--	 position:absolute;">-->
+<!--</div>-->
+
+<!--<button id="btn1">To 800px</button>-->
+<!--<button id="btn2">To 1200px</button>-->
+<!--<button id="btn3">Home</button>-->
+
+<!--<div id="container">-->
+<!--	<div id="road800"></div>-->
+<!--	<div id="road1200"></div>-->
+<!--	<div id="car"></div>-->
+<!--</div>-->
+
+
+<!--<button class="btn">百度一下</button>-->
+<!--<button class="btn">关闭窗口</button>-->
+<!--<button class="btn">移动窗口</button>-->
+<!--<button class="btn">调整窗口大小</button>-->
+
+<!--<button id="btn">刷新页面</button>-->
+<!--<button id="btn1">百度一下</button>-->
+<script>
+	// let btn = document.getElementById("btn");
+	// btn.onclick = function(){
+	// 	location.reload();
+	// }
+	//
+	// let btn1 = document.getElementById("btn1");
+	// btn1.onclick = function(){
+	// 	location.replace("https://www.baidu.com");
+	// }
+	// let ua = navigator.userAgent;
+	// console.log(ua);
+	
+	
+	// document.getElementsByClassName("btn")[0].onclick = function () {
+	// 	window.open("https://www.baidu.com/", "_blank");
+	// }
+	//
+	// document.getElementsByClassName("btn")[1].onclick = function () {
+	// 	window.close();
+	// }
+	//
+	// document.getElementsByClassName("btn")[2].onclick = function () {
+	// 	window.moveTo(0, 0);
+	// 	console.log("移动窗口");
+	// }
+	//
+	// document.getElementsByClassName("btn")[3].onclick = function () {
+	// 	window.resizeTo(300, 300);
+	// 	console.log("调整窗口大小");
+	// }
+	
+	// let car = document.getElementById("car")
+	// document.getElementById("btn1").onclick = function () {
+	// 	move(car, 800);
+	// }
+	// document.getElementById("btn2").onclick = function () {
+	// 	move(car, 1200);
+	// }
+	// document.getElementById("btn3").onclick = function () {
+	// 	move(car, 0);
+	// }
+	//
+	// function move(obj, target) {
+	// 	//清理定时器，只能存在一个定时器
+	// 	clearInterval(obj.timeId);
+	// 	obj.timeId = setInterval(function () {
+	// 		let current = obj.offsetLeft;
+	// 		let speed = 10;
+	// 		speed = current < target ? speed : -speed;
+	//
+	// 		if (Math.abs(target - current) > Math.abs(speed)) {
+	// 			obj.style.left = current + speed + "px";
+	// 		} else {
+	// 			//清理定时器，只能存在一个定时器
+	// 			clearInterval(obj.timeId);
+	// 			obj.style.left = target + "px";
+	// 		}
+	// 	}, 20)
+	//
+	// }
+	
+	
+	// let car = document.getElementById("car");
+	// let speed = 50;
+	// console.log(window.innerWidth);
+	//
+	// function move() {
+	// 	if (speed > 0) {
+	// 		if ((car.offsetLeft + Number(car.style.width) + speed) >= window.innerWidth) {
+	// 			car.style.left = window.innerWidth - Number(car.style.width) + "px";
+	// 			speed = -speed;
+	// 		} else {
+	// 			car.style.left = car.offsetLeft + speed + "px";
+	// 		}
+	// 	} else {
+	// 		if ((car.offsetLeft + speed) <= 0) {
+	// 			car.style.left = "0";
+	// 			speed = -speed;
+	// 		} else {
+	// 			car.style.left = car.offsetLeft + speed + "px";
+	// 		}
+	// 	}
+	// }
+	//
+	// setInterval(move, 200);
+	// let r = confirm("请选择");
+	// if(r){
+	// 	console.log(true);
+	// }
+	// else{
+	// 	console.log(false);
+	// }
+	
+	// let name = prompt("请输入您的名字", "Bill Gates");
+	// if (name != null) {
+	// 	console.log(name);
+	// }
+</script>
+
 </body>
 </html>

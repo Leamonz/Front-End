@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/af5119ab84.js" crossorigin="anonymous"></script>
 </head>
 <body>
-$END$
+<div class="container">
+	<h2>Theme</h2>
+	<div class="modes">
+		<span class="btn"></span>
+		<ul>
+			<li><i class="fa-solid fa-sun"></i><span>Light</span></li>
+			<li><i class="fa-solid fa-moon"></i><span>Dark</span></li>
+			<li><i class="fa-solid fa-circle-half-stroke"></i><span>Black</span></li>
+		</ul>
+	</div>
+	
+	<div class="settings">
+		<ul>
+			<li><i class="fa-solid fa-gear"></i><span>Account Setting</span></li>
+			<li><i class="fa-solid fa-comment-dots"></i><span>Give Feedback</span></li>
+			<li><i class="fa-solid fa-circle-info"></i><span>About</span></li>
+			<li><i class="fa-solid fa-envelope"></i><span>Support</span></li>
+		</ul>
+	</div>
+</div>
+
+<script>
+	let switchers = document.querySelectorAll(".container .modes li")
+	let btn = document.getElementsByClassName("btn")[0]
+	for (let i = 0; i < 3; i++) {
+		switchers[i].onclick = function () {
+			btn.style.left = switchers[i].offsetLeft + "px"
+		}
+	}
+</script>
 </body>
 </html>
